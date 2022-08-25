@@ -9,7 +9,9 @@ namespace Entities.Models
         public string Title { get; set; }
         public string Description { get; set; }
         public DateTime EventDate { get; set; }
-        public virtual ICollection<TopicDisputer> Disputers { get; set; }
+        public virtual ICollection<TopicDisputer> Disputers { get; set; } = new List<TopicDisputer>();
+        public virtual ICollection<TopicTheme> Themes { get; set; }
+
 
     }
 }

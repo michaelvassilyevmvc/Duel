@@ -7,10 +7,11 @@ namespace DataAccess.Interfaces
 {
     public interface IDbContext
     {
-        public DbSet<Topic> Topics { get; set; }
-        public DbSet<Disputer> Disputers { get; set; }
-        public DbSet<TopicDisputer> TopicDisputers { get; set; }
+        public DbSet<Topic> Topics { get; }
+        public DbSet<Disputer> Disputers { get; }
+        public DbSet<Theme> Themes { get;  }
+        public DbSet<TopicDisputer> TopicDisputers { get; }
 
-        Task<int> SaveChangesAsync(CancellationToken token);
+        Task<int> SaveChangesAsync(CancellationToken token = default);
     }
 }

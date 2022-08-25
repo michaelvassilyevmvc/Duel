@@ -12,6 +12,7 @@ namespace DataAccess.MsSql
 
         public DbSet<Topic> Topics { get; set; }
         public DbSet<Disputer> Disputers { get; set; }
+        public DbSet<Theme> Themes { get; set; }
         public DbSet<TopicDisputer> TopicDisputers { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -29,6 +30,18 @@ namespace DataAccess.MsSql
                 .HasOne(x => x.Disputer)
                 .WithMany(x => x.Topics)
                 .HasForeignKey(x => x.DisputerId);
+
+            modelBuilder.Entity<TopicTheme>(x => x.HasKey(a => new { a.TopicId, a.ThemeId }));
+
+            modelBuilder.Entity<TopicTheme>()
+                .HasOne(x => x.Topic)
+                .WithMany(x => x.Themes)
+                .HasForeignKey(x => x.TopicId);
+
+            modelBuilder.Entity<TopicTheme>()
+                .HasOne(x => x.Theme)
+                .WithMany(x => x.Topics)
+                .HasForeignKey(x => x.ThemeId);
         }
     }
 }

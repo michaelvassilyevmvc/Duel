@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32413.511
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "API", "Duel\API.csproj", "{405EDA75-BB20-41A7-BEDC-F9E10423C08B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APIApp", "Duel\APIApp.csproj", "{405EDA75-BB20-41A7-BEDC-F9E10423C08B}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Entities", "Entities", "{23E539D1-D1FA-4908-A5FB-798DE4938E75}"
 EndProject
